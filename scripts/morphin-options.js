@@ -531,6 +531,10 @@ MorphinOptions.giant = [
     { name: 'Taiga Giant', size: 'huge' }
 ];
 
+MorphinOptions.monstrous = [
+    { name: 'Thriae Queen', size: 'huge' }
+];
+
 MorphinOptions.humanoid = [
     { name: 'Charau-Ka', size: 'sm' },
     { name: 'Dark Creeper', size: 'sm' },

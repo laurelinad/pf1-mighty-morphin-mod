@@ -424,6 +424,50 @@ MorphinChanges.changes = {
             }
         }
     },
+    monstrousPhysique: {
+        monstrous: {
+            sm: {
+                changes: [
+                    { formula: '2', operator: 'add', target: 'dex', modifier: 'size', priority: 0},
+                    { formula: '1', operator: 'add', target: 'nac', modifier: 'untyped', priority: 0}
+                ]
+            },
+            med: {
+                changes: [
+                    { formula: '2', operator: 'add', target: 'str', modifier: 'size', priority: 0},
+                    { formula: '2', operator: 'add', target: 'nac', modifier: 'untyped', priority: 0}
+                ]
+            },
+            tiny: {
+                changes: [
+                    { formula: '-2', operator: 'add', target: 'str', modifier: 'untyped', priority: 0},
+                    { formula: '4', operator: 'add', target: 'dex', modifier: 'size', priority: 0},
+                    { formula: '1', operator: 'add', target: 'nac', modifier: 'untyped', priority: 0}
+                ]
+            },
+            large: {
+                changes: [
+                    { formula: '4', operator: 'add', target: 'str', modifier: 'size', priority: 0},
+                    { formula: '-2', operator: 'add', target: 'dex', modifier: 'untyped', priority: 0},
+                    { formula: '4', operator: 'add', target: 'nac', modifier: 'untyped', priority: 0}
+                ]
+            },
+            dim: {
+                changes: [
+                    { formula: '6', operator: 'add', target: 'dex', modifier: 'size', priority: 0},
+                    { formula: '-4', operator: 'add', target: 'str', modifier: 'untyped', priority: 0},
+                    { formula: '1', operator: 'add', target: 'nac', modifier: 'untyped', priority: 0}
+                ]
+            },
+            huge: {
+                changes: [
+                    { formula: '6', operator: 'add', target: 'str', modifier: 'size', priority: 0},
+                    { formula: '-4', operator: 'add', target: 'dex', modifier: 'untyped', priority: 0},
+                    { formula: '6', operator: 'add', target: 'nac', modifier: 'untyped', priority: 0}
+                ]
+            }
+        }
+    },
     formOfTheDragon: {
         dragon: {
             1: {
@@ -14453,6 +14497,31 @@ MorphinChanges.changes = {
         dv: [
             'fire'
         ]
+    },
+    'Thriae Queen': {
+        size: 'huge',
+        attacks: [
+            { name: 'Sting', diceCount: 2, diceSize: 6, count: 1, special: ['Poison'] }
+        ],
+        speed: {
+            land: 30,
+            fly: {
+                base: 50,
+                maneuverability: 'good'
+            }
+        },
+        sense: [
+            1, 7
+        ],
+        effect: {
+            'Poison': { note: 'Poison (Ex) - Sting—injury; save Fort DC 10+SL+Mod; frequency 1/round for 6 rounds; effect 1d6 Con plus staggered for 1 round; cure 2 consecutive saves.', type: 'fort', saveDesc: 'Fort Cures' }
+        },
+        eres: [
+            { amount: 20, operator: true, types: ['acid', ''] }
+        ],
+        di: [
+            'sonic'
+        ],
     }
 };
 
@@ -14486,6 +14555,12 @@ MorphinChanges.allowedSpecials = {
     giantForm: {
         '1': ['Rend', 'RockCatching', 'RockThrowing'],
         '2': ['Rend', 'RockCatching', 'RockThrowing']
+    },
+    monstrousPhysique: {
+        '1': [],
+        '2': ['Grab', 'Pounce', 'Trip'],
+        '3': ['Grab', 'Pounce', 'Trip', 'Constrict', 'Ferocity', 'Grab', 'Jet90', 'Jet200', 'Jet240', 'Jet260', 'Jet300', 'Poison', 'Rake', 'Trample', 'Web'],
+        '4': ['Grab', 'Pounce', 'Trip', 'Constrict', 'Ferocity', 'Grab', 'Jet90', 'Jet200', 'Jet240', 'Jet260', 'Jet300', 'Poison', 'Rake', 'Trample', 'Web', 'BreathWeapon', 'Breath', 'BreathWeaponBlack', 'BreathWeaponBlue', 'BreathWeaponGreen', 'BreathWeaponRed', 'BreathWeaponWhite', 'Rend', 'Roar', 'Spikes']
     },
     alterSelf: {
         '1': [ ]
@@ -14527,6 +14602,12 @@ MorphinChanges.allowedSenses = {
         '1': { 'dv': { static: 'DARKVISION', value: 60 }, 'll': { static:'LOWLIGHT', value: true } },
         '2': { 'dv': { static: 'DARKVISION', value: 60 }, 'll': { static:'LOWLIGHT', value: true } }
     },
+    monstrousPhysique: {
+        '1': { 'dv': { static: 'DARKVISION', value: 60 }, 'll': { static: 'LOWLIGHT', value: true }, 'sc': { static: 'SCENT', value: 30 } },
+        '2': { 'dv': { static: 'DARKVISION', value: 60 }, 'll': { static: 'LOWLIGHT', value: true }, 'sc': { static: 'SCENT', value: 30 } },
+        '3': { 'bse': { static: 'BLINDSENSE', value: 30 }, 'dv': { static: 'DARKVISION', value: 60 }, 'll': { static: 'LOWLIGHT', value: true }, 'sc': { static: 'SCENT', value: 30 } },
+        '4': { 'bse': { static: 'BLINDSENSE', value: 60 }, 'dv': { static: 'DARKVISION', value: 90 }, 'll': { static: 'LOWLIGHT', value: true }, 'sc': { static: 'SCENT', value: 30 }, 'ts': { static: 'TREMORSENSE', value: 60 } }
+    },
     alterSelf: {
         '1': { 'dv': { static: 'DARKVISION', value: 60 }, 'll': { static:'LOWLIGHT', value: true }, 'sc': { static: 'SCENT', value: 30 } }
     },
@@ -14565,6 +14646,12 @@ MorphinChanges.allowedSpeeds = {
     giantForm: {
         '1': { },
         '2': { swim: 60 }
+    },
+    monstrousPhysique: {
+        '1': { climb: 30, fly: { base: 30, maneuverability: 'average'}, swim: 30 },
+        '2': { climb: 60, fly: { base: 60, maneuverability: 'good'}, swim: 60 },
+        '3': { burrow: 30, climb: 90, fly: { base: 90, maneuverability: 'good'}, swim: 90 },
+        '4': { burrow: 60, climb: 90, fly: { base: 120, maneuverability: 'good'}, swim: 120 }
     },
     alterSelf: {
         '1': { swim: 30 }
@@ -14610,6 +14697,12 @@ MorphinChanges.allowedAttributes = {
         '1': { regen: { max: 5 }, di: { elements: MorphinChanges.elementTypes.elements, max: 20 }, eres: { elements: MorphinChanges.elementTypes.elements, max: 20 }, dv: { elements: MorphinChanges.elementTypes.elements } },
         '2': { regen: { max: 5 }, di: { elements: MorphinChanges.elementTypes.elements }, eres: { elements: MorphinChanges.elementTypes.elements }, dv: { elements: MorphinChanges.elementTypes.elements } }
     },
+    monstrousPhysique: {
+        '1': { },
+        '2': { },
+        '3': { },
+        '4': { di: { elements: MorphinChanges.elementTypes.elements, max: 20 }, eres: { elements: MorphinChanges.elementTypes.elements, max: 20 }, dv: { elements: MorphinChanges.elementTypes.elements } },
+    },
     alterSelf: {
         '1': { }
     },
@@ -14632,6 +14725,7 @@ MorphinChanges.buffIcons = {
     elementalBody: 'systems/pf1/icons/spells/wind-grasp-magenta-2.jpg',
     verminShape: 'systems/pf1/icons/races/creature-types/vermin.png',
     giantForm: 'systems/pf1/icons/skills/red_01.jpg',
+    monstrousPhysique: 'icons/creatures/magical/humanoid-silhouette-glowing-pink.webp',
     shifterWildShape: 'icons/magic/nature/wolf-paw-glow-green.webp',
     formOfTheDragon: 'systems/pf1/icons/races/creature-types/dragon.png'
 };
