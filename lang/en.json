@@ -133,6 +133,9 @@
             "MaulerBattleForm": {
                 "Name": "Battle Form"
             },
+            "MonstrousPhysique": {
+                "Name": "Monstrous Physique"
+            },
             "PlantShape": {
                 "Name": "Plant Shape"
             },
@@ -337,6 +340,8 @@
             "LandSpeed": "Land Speed",
             "MagicalBeast": "Magical Beast",
             "MagicalBeastDialogName": "Mighty Morphin Magical Beast Shape",
+            "MonstrousHumanoid": "Monstrous Humanoid",
+            "MonstrousPhysiqueDialogName": "MightyMorphin Monstrous Physique Shape",
             "NaturalAC": "Natural AC",
             "None": "None",
             "OK": "OK",
@@ -359,6 +364,7 @@
             "SelectGiantSize": "Select Giant Size",
             "SelectHumanoidSize": "Select Humanoid Size",
             "SelectMagicalBeastSize": "Select Magical Beast Size",
+            "SelectMonstrousPhysiqueSize": "Select Monstrous Physique Size",
             "SelectMutatedLimb": "Select Mutated Limb Attack",
             "SelectPlanarType": "Select Planar Wild Shape Template",
             "SelectPlantSize": "Select Plant Size",
