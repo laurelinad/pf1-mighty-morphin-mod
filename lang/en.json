@@ -223,6 +223,7 @@
         "InputCasterLevel": "Input Caster Level",
         "MagicalBeastInvalidWarning": "is not a valid option for Magical Beast Shape",
         "ManyTokensWarning": "Too many actors selected. Choose one token",
+        "MonstrousInvalidWarning": " is not a valid option for Monstrous Physique",
         "MustSpecifyAspect": "You must specify the Aspect choice",
         "MustSpecifyForm": "You must specify major or minor form for the Aspect",
         "MutatedShape": "Mutated Shape",
