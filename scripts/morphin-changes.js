@@ -428,42 +428,42 @@ MorphinChanges.changes = {
         monstrous: {
             sm: {
                 changes: [
-                    { formula: '2', operator: 'add', target: 'dex', modifier: 'size', priority: 0},
-                    { formula: '1', operator: 'add', target: 'nac', modifier: 'untyped', priority: 0}
+                    { formula: '2', operator: 'add', target: 'dex', modifier: 'size', priority: 0, value: 2 },
+                    { formula: '1', operator: 'add', target: 'nac', modifier: 'untyped', priority: 0, value: 1 }
                 ]
             },
             med: {
                 changes: [
-                    { formula: '2', operator: 'add', target: 'str', modifier: 'size', priority: 0},
-                    { formula: '2', operator: 'add', target: 'nac', modifier: 'untyped', priority: 0}
+                    { formula: '2', operator: 'add', target: 'str', modifier: 'size', priority: 0, value: 2 },
+                    { formula: '2', operator: 'add', target: 'nac', modifier: 'untyped', priority: 0, value: 2 }
                 ]
             },
             tiny: {
                 changes: [
-                    { formula: '-2', operator: 'add', target: 'str', modifier: 'untyped', priority: 0},
-                    { formula: '4', operator: 'add', target: 'dex', modifier: 'size', priority: 0},
-                    { formula: '1', operator: 'add', target: 'nac', modifier: 'untyped', priority: 0}
+                    { formula: '-2', operator: 'add', target: 'str', modifier: 'untyped', priority: 0, value: -2 },
+                    { formula: '4', operator: 'add', target: 'dex', modifier: 'size', priority: 0, value: 4 },
+                    { formula: '1', operator: 'add', target: 'nac', modifier: 'untyped', priority: 0, value: 1 }
                 ]
             },
             large: {
                 changes: [
-                    { formula: '4', operator: 'add', target: 'str', modifier: 'size', priority: 0},
-                    { formula: '-2', operator: 'add', target: 'dex', modifier: 'untyped', priority: 0},
-                    { formula: '4', operator: 'add', target: 'nac', modifier: 'untyped', priority: 0}
+                    { formula: '4', operator: 'add', target: 'str', modifier: 'size', priority: 0, value: 4 },
+                    { formula: '-2', operator: 'add', target: 'dex', modifier: 'untyped', priority: 0, value: -2 },
+                    { formula: '4', operator: 'add', target: 'nac', modifier: 'untyped', priority: 0, value: 4 }
                 ]
             },
             dim: {
                 changes: [
-                    { formula: '6', operator: 'add', target: 'dex', modifier: 'size', priority: 0},
-                    { formula: '-4', operator: 'add', target: 'str', modifier: 'untyped', priority: 0},
-                    { formula: '1', operator: 'add', target: 'nac', modifier: 'untyped', priority: 0}
+                    { formula: '6', operator: 'add', target: 'dex', modifier: 'size', priority: 0, value: 6 },
+                    { formula: '-4', operator: 'add', target: 'str', modifier: 'untyped', priority: 0, value: -4 },
+                    { formula: '1', operator: 'add', target: 'nac', modifier: 'untyped', priority: 0, value: 1 }
                 ]
             },
             huge: {
                 changes: [
-                    { formula: '6', operator: 'add', target: 'str', modifier: 'size', priority: 0},
-                    { formula: '-4', operator: 'add', target: 'dex', modifier: 'untyped', priority: 0},
-                    { formula: '6', operator: 'add', target: 'nac', modifier: 'untyped', priority: 0}
+                    { formula: '6', operator: 'add', target: 'str', modifier: 'size', priority: 0, value: 6 },
+                    { formula: '-4', operator: 'add', target: 'dex', modifier: 'untyped', priority: 0, value: -4 },
+                    { formula: '6', operator: 'add', target: 'nac', modifier: 'untyped', priority: 0, value: 6 }
                 ]
             }
         }
@@ -14506,7 +14506,7 @@ MorphinChanges.changes = {
                 maneuverability: 'good'
             }
         },
-        sense: [
+        senses: [
             1, 7
         ],
         effect: {
