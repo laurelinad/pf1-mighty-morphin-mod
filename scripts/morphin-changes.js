@@ -14494,6 +14494,265 @@ MorphinChanges.changes = {
             'fire'
         ]
     },
+    'Adherer': {
+        size: 'med',
+        attacks: [
+            { name: 'Slam', diceCount: 1, diceSize: 6, count: 2, special: ['Grab'] }
+        ],
+        speed: {
+            land: 30,
+            climb: 10
+        },
+        senses: [
+            7
+        ]
+    },
+    'Bog Strider': {
+        size: 'med',
+        attacks: [
+            { name: 'Bite', diceCount: 1, diceSize: 6, count: 1 },
+            { name: 'Claw', diceCount: 1, diceSize: 4, count: 2 }
+        ],
+        speed: {
+            land: 30
+        },
+        senses: [
+            7
+        ],
+        special: [
+            'HoldBreath'
+        ]
+    },
+    'Caliban': {
+        size: 'med',
+        attacks: [
+            { name: 'Claw', diceCount: 1, diceSize: 4, count: 2 }
+        ],
+        speed: {
+            land: 30,
+            swim: 20
+        },
+        senses: [
+            1, 7
+        ]
+    },
+    'Contemplative': {
+        size: 'med',
+        attacks: [
+            { name: 'Claw', diceCount: 1, diceSize: 4, count: 2 }
+        ],
+        speed: {
+            land: 5,
+            fly: {
+                base: 30,
+                maneuverability: 'perfect'
+            }
+        },
+        senses: [
+            7, 24
+        ]
+    },
+    'Deathsnatcher': {
+        size: 'med',
+        attacks: [
+            { name: 'Bite', diceCount: 2, diceSize: 6, count: 1 },
+            { name: 'Claw', diceCount: 1, diceSize: 8, count: 4 },
+            { name: 'Sting', diceCount: 1, diceSize: 6, count: 1, special: ['Poison'] }
+        ],
+        speed: {
+            land: 30,
+            fly: {
+                base: 50,
+                maneuverability: 'good'
+            }
+        },
+        senses: [
+            14, 40
+        ],
+        effect: {
+            'Poison': { note: 'Poison (Su) - Sting—injury; save Fort DC 10+SL+Mod; frequency 1/round for 6 rounds; effect 1d4 Con drain; cure 2 consecutive saves.', type: 'fort', saveDesc: 'Fort Cures' }
+        },
+        special: [
+            'Pounce'
+        ],
+        eres: [
+            { amount: 30, operator: true, types: ['cold', ''] },
+            { amount: 30, operator: true, types: ['fire', ''] }
+        ]
+    },
+    'Dire Corby': {
+        size: 'med',
+        attacks: [
+            { name: 'Claw', diceCount: 1, diceSize: 4, count: 2, special: ['Rend'] }
+        ],
+        speed: {
+            land: 30,
+            climb: 30
+        },
+        senses: [
+            7
+        ],
+        effect: {
+            'Rend': { note: 'Rend if both claws hit, added to second claw damage. [[/d sizeRoll(1, 4, @size, 4) # Rend damage added to second claw]]{{Roll Rend Damage}}' }
+        },
+        special: [
+            'Ferocity'
+        ],
+    },
+    'Euryale': {
+        size: 'med',
+        attacks: [
+            { name: 'Bite', diceCount: 1, diceSize: 6, count: 6, special: ['Poison'] }
+        ],
+        speed: {
+            land: 60,
+            burrow: 30,
+        },
+        senses: [
+            11, 42
+        ],
+        effect: {
+            'Poison': { note: 'Poison (Ex) - Bite—injury; save Fort DC 10+SL+Mod; frequency 1/round for 6 rounds; effect 1d4 Dex, 1d4 Con, vulnerability to sonic for 1 minute; cure 3 consecutive saves.', type: 'fort', saveDesc: 'Fort Cures' }
+        },
+        di: [
+            'sonic'
+        ]
+    },
+
+
+
+    'Tikbalang': {
+        size: 'med',
+        attacks: [
+            { name: 'Bite', diceCount: 2, diceSize: 4, count: 1 },
+            { name: 'Hoof', diceCount: 1, diceSize: 8, count: 2 }
+        ],
+        specialAttack: [
+            { name: 'Trample', diceCount: 1, diceSize: 8, count: 1, special: ['Trample'], mult: 1.5, attackType: 'mcman' }
+        ],
+        speed: {
+            land: 40
+        },
+        senses: [
+            1, 7, 14
+        ],
+        effect: {
+            'Trample': { note: 'Trample as part of overrun, AoOs against at -4. Forgo AoO to attempt avoiding, DC 10+SL+Mod', type: 'ref', saveDesc: 'Reflex Avoids', description: '<p>As a full-round action, a creature with the trample ability can attempt to overrun any creature that is at least one size category Smaller than itself. This works just like the overrun combat maneuver, but the trampling creature does not need to make a check, it merely has to move over opponents in its path. Targets of a trample take an amount of damage equal to the trampling creature\'s slam damage + 1-1/2 times its Str modifier. Targets of a trample can make an attack of opportunity, but at a -4 penalty. If targets forgo an attack of opportunity, they can attempt to avoid the trampling creature and receive a Reflex save to take half damage. The save DC against a creature\'s trample attack is 10 + Spell Level + Caster Stat Mod. A trampling creature can only deal trampling damage to each target once per round, no matter how many times its movement takes it over a target creature.</p>' }
+        },
+        special: [
+            'Pounce'
+        ]
+    },
+    'Buggane': {
+        size: 'lg',
+        attacks: [
+            { name: 'Claw', diceCount: 1, diceSize: 8, count: 2, special: ['Rend'] },
+            { name: 'Gore', diceCount: 1, diceSize: 8, count: 1 }
+        ],
+        speed: {
+            land: 30,
+            burrow: 30
+        },
+        senses: [
+            32
+        ],
+        effect: {
+            'Rend': { note: 'Rend if both claws hit, added to second claw damage. [[/d sizeRoll(1, 8, @size, 5) # Rend damage added to second claw]]{{Roll Rend Damage}}' }
+        }
+    },
+    'Calikang': {
+        size: 'lg',
+        attacks: [
+            { name: 'Slam', diceCount: 1, diceSize: 6, count: 4 }
+        ],
+        specialAttack: [
+            { name: 'BreathWeapon', diceCount: 0, diceSize: 0, count: 1, special: ['Breath'], attackType: 'save', nonCrit: { formula: '14d6', type: { values: ['cold'], custom: '' } }, damageAbility: '', area: '60-ft line', templateShape: 'ray',  templateSize: '60' },
+            { name: 'BreathWeapon', diceCount: 0, diceSize: 0, count: 1, special: ['Breath'], attackType: 'save', nonCrit: { formula: '14d6', type: { values: ['acid'], custom: '' } }, damageAbility: '', area: '60-ft line', templateShape: 'ray',  templateSize: '60' },
+            { name: 'BreathWeapon', diceCount: 0, diceSize: 0, count: 1, special: ['Breath'], attackType: 'save', nonCrit: { formula: '14d6 + 14', type: { values: ['electric'], custom: '' } }, damageAbility: '', area: '60-ft line', templateShape: 'ray',  templateSize: '60' },
+            { name: 'BreathWeapon', diceCount: 0, diceSize: 0, count: 1, special: ['Breath'], attackType: 'save', nonCrit: { formula: '14d6', type: { values: ['fire'], custom: '' } }, damageAbility: '', area: '60-ft line', templateShape: 'ray',  templateSize: '60' },
+            { name: 'BreathWeapon', diceCount: 0, diceSize: 0, count: 1, special: ['Breath'], attackType: 'save', nonCrit: { formula: '14d6', type: { values: ['sonic'], custom: '' } }, damageAbility: '', area: '60-ft line', templateShape: 'ray',  templateSize: '60' }
+        ],
+        speed: {
+            land: 30
+        },
+        senses: [
+            7
+        ],
+        effect: {
+            'Breath': { note: 'Breath area: 60ft line. DC 10+SL+Mod', type: 'ref', saveDesc: 'Reflex for half', description: '<p>Usable once every 1d4 rounds</p>' }
+        },
+        di: [
+            'electric',
+            'negative'
+        ]
+    },
+    'Centaur': {
+        size: 'lg',
+        attacks: [
+            { name: 'Hoof', diceCount: 1, diceSize: 6, count: 2 }
+        ],
+        speed: {
+            land: 50
+        },
+        senses: [
+            7
+        ]
+    },
+    'Derhii': {
+        size: 'lg',
+        attacks: [
+            { name: 'Slam', diceCount: 1, diceSize: 6, count: 2 }
+        ],
+        speed: {
+            land: 30,
+            climb: 30,
+            fly: {
+                base: 60,
+                maneuverability: 'poor'
+            }
+        },
+        senses: [
+            7, 14
+        ]
+    },
+    'Fen Mauler': {
+        size: 'lg',
+        attacks: [
+            { name: 'Bite', diceCount: 1, diceSize: 8, count: 1 },
+            { name: 'Claw', diceCount: 1, diceSize: 8, count: 2, special: ['Rend'] }
+        ],
+        speed: {
+            land: 30
+        },
+        senses: [
+            1, 7, 14
+        ],
+        effect: {
+            'Rend': { note: 'Rend if both claws hit, added to second claw damage. [[/d sizeRoll(1, 8, @size, 5) # Rend damage added to second claw]]{{Roll Rend Damage}}' }
+        },
+        special: [
+            'Pounce'
+        ],
+        eres: [
+            { amount: 10, operator: true, types: ['cold', ''] }
+        ]
+    },
+    'Basavan': {
+        size: 'huge',
+        attacks: [
+            { name: 'Slam', diceCount: 2, diceSize: 6, count: 2 }
+        ],
+        speed: {
+            land: 40
+        },
+        senses: [
+            7
+        ],
+        eres: [
+            { amount: 20, operator: true, types: ['cold', ''] },
+            { amount: 20, operator: true, types: ['fire', ''] }
+        ],
+    },
     'Thriae Queen': {
         size: 'huge',
         attacks: [
@@ -14556,7 +14815,7 @@ MorphinChanges.allowedSpecials = {
         '1': [],
         '2': ['Grab', 'Pounce', 'Trip'],
         '3': ['Grab', 'Pounce', 'Trip', 'Constrict', 'Ferocity', 'Grab', 'Jet90', 'Jet200', 'Jet240', 'Jet260', 'Jet300', 'Poison', 'Rake', 'Trample', 'Web'],
-        '4': ['Grab', 'Pounce', 'Trip', 'Constrict', 'Ferocity', 'Grab', 'Jet90', 'Jet200', 'Jet240', 'Jet260', 'Jet300', 'Poison', 'Rake', 'Trample', 'Web', 'BreathWeapon', 'Breath', 'BreathWeaponBlack', 'BreathWeaponBlue', 'BreathWeaponGreen', 'BreathWeaponRed', 'BreathWeaponWhite', 'Rend', 'Roar', 'Spikes']
+        '4': ['Grab', 'Pounce', 'Trip', 'Constrict', 'Ferocity', 'Grab', 'Jet90', 'Jet200', 'Jet240', 'Jet260', 'Jet300', 'Poison', 'Rake', 'Trample', 'Web', 'BreathWeapon', 'Breath', 'BreathWeaponBlack', 'BreathWeaponBlue', 'BreathWeaponGreen', 'BreathWeaponRed', 'BreathWeaponWhite', 'Rend', 'Roar', 'Spikes', 'PoisonImmunity']
     },
     alterSelf: {
         '1': [ ]

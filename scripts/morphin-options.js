@@ -532,6 +532,23 @@ MorphinOptions.giant = [
 ];
 
 MorphinOptions.monstrous = [
+    { name: 'Adherer', size: 'med' },
+    { name: 'Bog Strider', size: 'med' },
+    { name: 'Caliban', size: 'med' },
+    { name: 'Contemplative', size: 'med' },
+    { name: 'Deathsnatcher', size: 'med' },
+    { name: 'Dire Corby', size: 'med' },
+    { name: 'Euryale', size: 'med' },
+
+    { name: 'Tikbalang', size: 'med'},
+
+    { name: 'Buggane', size: 'lg' },
+    { name: 'Calikang', size: 'lg' },
+    { name: 'Centaur', size: 'lg' },
+    { name: 'Derhii', size: 'lg' },
+    { name: 'Fen Mauler', size: 'lg' },
+
+    { name: 'Basavan', size: 'huge' },
     { name: 'Thriae Queen', size: 'huge' }
 ];
 
